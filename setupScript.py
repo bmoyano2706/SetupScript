@@ -59,15 +59,23 @@ os.system('brew tap caskroom/versions')
 os.system('brew tap caskroom/fonts')
 os.system('brew update && brew upgrade && brew cleanup && brew cask cleanup')
 
+#Installing Mas
+print "Installing Mas"
+os.system('brew install mas')
 
 # OSX Tweaks & Essentials
 print "Installing Quicklook Helpers"
 os.system('brew cask install qlcolorcode qlmarkdown quicklook-csv quicklook-json webpquicklook suspicious-package epubquicklook qlstephen qlprettypatch font-hack qlvideo')
 
-
+# Installing third party apps
 print "Installing Essential Apps"
 os.system('brew cask install spectacle the-unarchiver')
 os.system('brew cask install google-chrome spotify slack zoomus adobe-acrobat-reader google-backup-and-sync')
+
+
+#Installing Appstore Apps
+os.system('mas install 409183694')  # Keynote
+os.system('mas upgrade')  # Update all appstore apps
 
 
 #Random OSX Settings
