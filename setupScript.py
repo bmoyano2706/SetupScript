@@ -73,7 +73,7 @@ os.system('brew cask install qlcolorcode qlmarkdown quicklook-csv quicklook-json
 
 print "Installing Essential Apps"
 os.system('brew cask install spectacle the-unarchiver')
-os.system('brew cask install google-chrome spotify slack zoom adobe-acrobat-reader google-backup-and-sync')
+os.system('brew cask install google-chrome spotify slack zoomus adobe-acrobat-reader google-backup-and-sync')
 
 
 #Random OSX Settings
