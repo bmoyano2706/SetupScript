@@ -41,11 +41,6 @@ print "*************************************"
 print "Setting up your Mac..."
 print "*************************************"
 
-# Create a Private Key
-if not os.path.isfile(os.path.expanduser("~") + '/.ssh/id_rsa.pub') :
-  print "Creating your Private Key"
-  os.system('ssh-keygen -t rsa -b 4096 -f ~/.ssh/id_rsa -N "" -C "%s"' % email)
-
 
 # Set computer name & git info (as done via System Preferences → Sharing)
 os.system('sudo scutil --set ComputerName "%s"' % name)
@@ -68,7 +63,6 @@ os.system('brew update && brew upgrade && brew cleanup && brew cask cleanup')
 # OSX Tweaks & Essentials
 print "Installing Quicklook Helpers"
 os.system('brew cask install qlcolorcode qlmarkdown quicklook-csv quicklook-json webpquicklook suspicious-package epubquicklook qlstephen qlprettypatch font-hack qlvideo')
-
 
 
 print "Installing Essential Apps"
@@ -99,10 +93,6 @@ os.system('defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -boo
 # Make Google Chrome the default browser
 os.system('open -a "Google Chrome" --args --make-default-browser')
 
-# Open Spectacle (Needs to be enabled manually)
-os.system('open -a "Spectacle"')
-
-
 # Clean Up
 os.system('brew cleanup && brew cask cleanup')
 
@@ -110,10 +100,10 @@ os.system('brew cleanup && brew cask cleanup')
 show_notification("We need your password")
 os.system('sudo nvram SystemAudioVolume=%00')
 
-
 show_notification("All done! Enjoy your new macOS Thank you for joining Solstice ^^!")
 
-
+# Open Spectacle (Needs to be enabled manually)
+os.system('open -a "Spectacle"')
 
 
 
