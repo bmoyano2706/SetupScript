@@ -63,6 +63,9 @@ os.system('brew update && brew upgrade && brew cleanup && brew cask cleanup')
 print "Installing Mas"
 os.system('brew install mas')
 
+#Singin Appstore first time
+os.system('mas signin --dialog "%s"' % email)
+
 #Installing Appstore Apps
 os.system('mas install 409183694')  # Keynote
 os.system('mas upgrade')  # Update all appstore apps
