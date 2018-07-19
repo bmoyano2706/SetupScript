@@ -64,7 +64,7 @@ print "Installing Mas"
 os.system('brew install mas')
 
 #Singin Appstore first time
-os.system('mas signin --dialog "%s"' % email)
+os.system('mas signin --dialog')
 
 #Installing Appstore Apps
 os.system('mas install 409183694')  # Keynote
