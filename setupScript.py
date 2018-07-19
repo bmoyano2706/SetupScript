@@ -42,7 +42,7 @@ print "Setting up your Mac..."
 print "*************************************"
 
 
-# Set computer name & git info (as done via System Preferences → Sharing)
+# Set computer name info (as done via System Preferences → Sharing)
 os.system('sudo scutil --set ComputerName "%s"' % name)
 os.system('sudo scutil --set HostName "%s"' % name)
 os.system('sudo scutil --set LocalHostName "%s"' % name.replace(' ', '-')) # Doesn't support spaces
@@ -64,7 +64,7 @@ print "Installing Mas"
 os.system('brew install mas')
 
 #Singin Appstore first time
-os.system('mas signin "%s"' % email)
+os.system('mas signin --dialog "%s"' % email)
 
 #Installing Appstore Apps
 os.system('mas install 409183694')  # Keynote
@@ -112,8 +112,7 @@ os.system('sudo nvram SystemAudioVolume=%00')
 
 show_notification("All done! Enjoy your new macOS Thank you for joining Solstice ^^!")
 
-# Open Spectacle (Needs to be enabled manually)
-os.system('open -a "Spectacle"')
+
 
 
 
